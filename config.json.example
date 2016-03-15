@@ -1,0 +1,4 @@
+{
+	"connectionKey": "<long secret key goes here>",
+	"deploymentRoot": "/var/www/sites"
+}
