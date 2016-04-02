@@ -57,14 +57,14 @@ server.on("connection", function(ws) {
 					fs.unlink(targetPath);
 					break;
 				case "createSite":
-					let config = generateCaddyConfiguration(message.site, {
+					let caddyConfiguration = generateCaddyConfiguration(message.site, {
 						tlsEmail: config.tlsEmail,
 						siteRoot: deploymentPath(message.site)
 					});
 
 					Promise.try(() => {
 						return Promise.all([
-							fs.writeFileAsync(configPath(message.site), config),
+							fs.writeFileAsync(configPath(message.site), caddyConfiguration),
 							fs.mkdirsAsync(deploymentPath(message.site))
 						]);
 					}).then(() => {
