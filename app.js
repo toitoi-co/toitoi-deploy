@@ -5,7 +5,7 @@ const WebSocket = require("ws");
 const fs = Promise.promisifyAll(require("fs-extra"));
 const path = require("path");
 const walk = require("walk");
-const childProcess = Promise.promisifyAll(require("child-process"), {multiArgs: true})
+const childProcess = Promise.promisifyAll(require("child_process"), {multiArgs: true})
 
 const generateCaddyConfiguration = require("./lib/generate-caddy-configuration");
 
