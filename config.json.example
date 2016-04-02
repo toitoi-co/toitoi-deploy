@@ -1,4 +1,11 @@
 {
 	"connectionKey": "<long secret key goes here>",
-	"deploymentRoot": "/var/www/sites"
+	"deploymentRoot": "/var/www/sites",
+	"configRoot": "/etc/caddy/sites",
+	"reloadCommand": ["sudo", "/root/caddy-reload.sh"],
+	"tlsEmail": "<your email address goes here>",
+	"listen": {
+		"host": "127.0.0.1",
+		"port": 6000
+	}
 }
